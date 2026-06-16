@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background-image: url("C:/Users/user/Downloads/images/bg.png");
+  background-size: cover;       /* cover the whole screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 20px;
+  margin-right: 55px;
+}
+
+.top-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.top-buttons button:hover {
+  background-color: #a3d2ca; /* color when hovered */
+}
+
+.home-icon {
+  width: 45px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-size: 58px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  font-family: Cambria;
+  color: #006a71;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0 200px;
+  justify-items: center;
+}
+
+.amphibians {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.fish {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.animal-card {
+  width: 250px;
+  height: 200px;
+  border: 2px solid #ccc;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.animal-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.animal-card:hover {
+  transform: scale(1.05);
+}
+
+.animal-card .label {
+  margin-top: 10px;
+}
+
+/* Specific placement */
+.amphibians {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.fish {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.icon-button:hover {
+  transform: scale(1.05);
+}
+
+.icon-button img {
+  width: 45px;
+  height: 45px;
+}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.png" alt="Zoo Logo" class="logo">
+
+    <div class="top-buttons">
+	  <a href="game.html"><button>GAMES🎮</button></a>
+	  <a href="video.html"><button>VIDEOS🎥</button></a>
+	</div>
+	<div class="nav-buttons">
+		<a href="introduction.html" class="icon-button">
+        <img src="back.png" alt="Back">
+      </a>
+      <a href="homepage.html" class="icon-button">
+        <img src="home.png" alt="Home">
+      </a>      
+    </div>
+  </div>
+
+  <!-- Title -->
+  <h1>&rArr; LET'S LEARN ABOUT ANIMAL SPECIES &lArr;</h1>
+
+  <!-- Animal grid -->
+  <div class="animal-grid">
+    <!-- Row 1 -->
+    <a href="mammals.html" class="animal-card">
+      <img src="panda1.png" alt="Mammals">
+      <div class="label">MAMMALS</div>   
+	</a>
+	<a href="birds.html" class="animal-card">
+      <img src="pc1.jpg" alt="Birds">
+      <div class="label">BIRDS</div>   
+	</a>
+	<a href="reptiles.html" class="animal-card">
+      <img src="croc1.jpg" alt="Reptiles">
+      <div class="label">REPTILES</div>   
+	</a>
+	<a href="amphibians.html" class="animal-card amphibians">
+      <img src="x1.jpg" alt="Amphibians">
+      <div class="label">AMPHIBIANS</div>   
+	</a>
+	<a href="fish.html" class="animal-card fish">
+      <img src="turtle1.png" alt="Fish">
+      <div class="label">FISH</div>   
+	</a>	
+
+  </div>
+
+</body>
+</html>

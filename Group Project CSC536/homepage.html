@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Alam Zoo</title>
+    <style>
+		@font-face {
+			font-family: 'TAN Headline';
+			src: url('TANHEADLINE-Regular.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+        body {        
+            margin: 0;
+            padding: 0;
+            width:100%;
+            background: url(homebg.png) no-repeat center center;
+            background-size: cover;
+			background-attachment: fixed;
+            
+        }
+        header {
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 700px; /* Adjust spacing between logo and text */
+        }        
+        footer {
+            color: #2C2C2C;
+            text-align: center;
+            padding: 1px;
+            margin-top: 120px;
+            margin-left: 100px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 50%; /* Adjust to fit container */
+            height: auto;
+            border-radius: 10px; /* Optional: round the corners */
+        }
+        .header-text {
+			font-family: 'TAN Headline', 'Lucida Console', Monospace;
+			font-size: 30px;
+			color: #2C2C2C;
+			letter-spacing: 5px;
+            text-align: center;
+            position: relative;
+            top: 100px;
+			padding-left: 100px;
+           
+        }   		
+		
+		.start-button {
+    display: inline-block;
+    text-decoration: none; 
+    margin-top: 40px;
+    font-size: 22px;
+    padding: 20px 30px;
+    border: 3px solid black; /* Bright teal border */
+    background-color: #007f5f; /* Base green */
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Lucida Console', Monospace;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #00b894;
+    color: #f4f3d8;
+    border-color: #00e6b8;
+    box-shadow: 0 0 5px #000000; /* Stronger glow on hover */
+}
+    </style>
+</head>
+<body> 
+    <header>
+        <div class="image-container">
+            <img src="logo.png" alt="Zoo Logo" class="logo"> 
+        </div>
+        
+    </header>
+    <div class="header-text">
+        <h1>EXPLORE & LEARN </h1>
+        <h1>ANIMAL CLASSIFICATION</h1>
+		<a href="introduction.html" class="start-button">Get Started</a>
+    </div>
+    
+    
+    <footer>
+        <p>&copy; B'BAFM. All Rights Reserved.</p>
+		<p>Bibah-Badrul-Asiyah-Fazreen-Mirul</p>
+    </footer>
+</body>
+</html>

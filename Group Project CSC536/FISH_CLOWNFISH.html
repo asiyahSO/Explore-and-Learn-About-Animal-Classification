@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+    }
+
+    /* Information Box - now side by side */
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Animal Grid */
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-buttons">
+    <!-- Back Button -->
+    <a href="fish.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Box - now side by side -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>OCELLARIS CLOWNFISH</h2>
+    <p>The Ocellaris Clownfish (Amphiprion ocellaris) is a small, brightly colored fish native to the coral reefs of the Indo-Pacific region in the Pacific Ocean. Famous for their orange bodies with white stripes outlined in black, these fish have a symbiotic relationship with sea anemones, which protect them from predators. Ocellaris clownfish are popular in the aquarium trade due to their vibrant appearance and engaging behavior. They feed primarily on algae, plankton, and small invertebrates.</p>
+  </div>
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> OCELLARIS CLOWNFISH</li>
+      <li><strong>SCIENTIFIC NAME:</strong> AMPHIPRION OCELLARIS</li>
+      <li><strong>TYPE:</strong> FISH</li>
+      <li><strong>SIZE:</strong> UP TO 4 INCHES</li>
+      <li><strong>WEIGHT:</strong> LESS THAN 1 OUNCE</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 6 TO 10 YEARS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal grid - image boxes only -->
+<div class="animal-grid">
+  <!-- Image Box 1 -->
+  <div class="animal-card">
+    <img src="clownfish1.jpg" alt="Fish 1">
+  </div>
+
+  <!-- Image Box 2 -->
+  <div class="animal-card">
+    <img src="clownfish2.jpg" alt="Fish 2">
+  </div>
+
+  <!-- Image Box 3 -->
+  <div class="animal-card">
+    <img src="clownfish3.jpg" alt="Fish 3">
+  </div>
+
+  <!-- Image Box 4 -->
+  <div class="animal-card">
+    <img src="clownfish4.jpg" alt="Fish 4">
+  </div>
+
+  <!-- Image Box 5 -->
+  <div class="animal-card">
+    <img src="clownfish5.jpg" alt="Fish 5">
+  </div>
+
+  <!-- Image Box 6 -->
+  <div class="animal-card">
+    <img src="clownfish6.jpg" alt="Fish 6">
+  </div>
+
+  <!-- Image Box 7 -->
+  <div class="animal-card">
+    <img src="clownfish7.jpg" alt="Fish 7">
+  </div>
+
+  <!-- Image Box 8 -->
+  <div class="animal-card">
+    <img src="clownfish8.jpg" alt="Fish 8">
+  </div>
+</div>
+
+</body>
+</html>

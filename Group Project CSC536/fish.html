@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species - Fish</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url('bg2.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .top-buttons a button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons a button:hover {
+      background-color: #45a049;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .back-logo,
+    .home-logo {
+      height: 40px;
+      cursor: pointer;
+    }
+	.back-logo:hover {
+	  transform: scale(1.05);
+	}
+    .home-logo:hover {
+	  transform: scale(1.05);
+	}
+
+
+    .main-content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: white;
+      text-transform: uppercase;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    }
+
+    .description-box {
+      background-color: #7b5b1d;
+      color: white;
+      padding: 15px;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      border-radius: 5px;
+    }
+
+    .map-section {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .map-section img {
+      width: 500px; 
+      max-width: 90%; 
+      height: auto;
+	  border: 2px solid;
+    }
+
+    .animal-buttons {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+
+    .animal-buttons a.card {
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      width: 180px;
+      background-color: #eee;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: black;
+    }
+
+    .animal-buttons a.card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-buttons img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .animal-buttons .label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.png" alt="Zoo Logo" class="logo">
+
+    <div class="top-buttons">
+      <a href="game.html"><button>GAMES</button></a>
+      <a href="video.html"><button>VIDEOS</button></a>
+    </div>
+
+    <div class="nav-icons">
+      <a href="index.html">
+        <img src="back.png" alt="Back" class="back-logo">
+      </a>
+      <a href="homepage.html">
+        <img src="home.png" alt="Home" class="home-logo">
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>FISH</h1>
+    <div class="description-box">
+      Fish are cold-blooded aquatic animals that typically have gills for breathing underwater, scales covering their bodies, and fins for swimming. They are the most diverse group of vertebrates, ranging from tiny minnows to massive sharks and rays. Fish live in a variety of water bodies including oceans, rivers, lakes, and streams.
+      <br><br>
+      Fish reproduce mainly by laying eggs, though some give birth to live young. They have evolved specialized senses to navigate and survive underwater, such as lateral lines to detect movement and electric fields. Fish play essential roles in aquatic ecosystems and are a major source of food for humans and other animals.
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <img src="fishmap.jpg" alt="Animal Map">
+    </div>
+
+    <!-- Animal Buttons -->
+    <div class="animal-buttons">
+      <a href="FISH_CLOWNFISH.html" class="card">
+        <img src="clownfish.jpg" alt="Clownfish">
+        <div class="label">CLOWN FISH</div>
+      </a>
+
+      <a href="FISH_SHARK.html" class="card">
+        <img src="whiteshark.jpg" alt="Great White Shark">
+        <div class="label">GREAT WHITE SHARK</div>
+      </a>
+
+      <a href="FISH_GOLDFISH.html" class="card">
+        <img src="goldfish.jpg" alt="Goldfish">
+        <div class="label">GOLDFISH</div>
+      </a>
+
+      <a href="FISH_ANGELFISH.html" class="card">
+        <img src="angelfish.jpg" alt="Angelfish">
+        <div class="label">ANGELFISH</div>
+      </a>
+
+      <a href="FISH_SEAHORSE.html" class="card">
+        <img src="seahorse.jpg" alt="Seahorse">
+        <div class="label">SEAHORSE</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

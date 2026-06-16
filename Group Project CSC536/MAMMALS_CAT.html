@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box, .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Sound button specific styling */
+    .top-buttons button.sound-btn {
+      background-color: #4CAF50;
+    }
+
+    .top-buttons button.sound-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Audio Element -->
+<audio id="animalSound" src="meow.mp3"></audio>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <!-- Sound Button -->
+    <button class="sound-btn" onclick="playSound()">🔊 SOUND</button>
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-icons">
+    <!-- Back Button -->
+    <a href="mammals.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Section -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>SIBERIAN CAT</h2>
+    <p>Siberian cats are a natural breed originating from Russia and are known for their robust, muscular build and luxurious triple-layered coat that helps them withstand cold climates. They have a friendly and playful temperament, making them excellent family pets. Siberians are highly intelligent, agile, and known for their agility and hunting skills. Their coat colors and patterns vary widely, but they typically have medium to large-sized bodies, round faces, and expressive eyes. The breed is hypoallergenic for many allergy sufferers due to its lower levels of allergenic proteins. Siberian cats have been cherished in Russian folklore for centuries and are now popular worldwide for their affectionate nature and striking appearance.</p>
+  </div>
+
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> SIBERIAN CAT</li>
+      <li><strong>SCIENTIFIC NAME:</strong> FELIS CATUS</li>
+      <li><strong>TYPE:</strong> MAMMALS</li>
+      <li><strong>SIZE:</strong> MEDIUM TO LARGE (8 TO 17 POUNDS)</li>
+      <li><strong>WEIGHT:</strong> 8 TO 17 POUNDS</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 12 TO 16 YEARS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal Grid -->
+<div class="animal-grid">
+  <a class="animal-card"><img src="./siberian1.jpg" alt="Cat 1"></a>
+  <a class="animal-card"><img src="./siberian2.jpg" alt="Cat 2"></a>
+  <a class="animal-card"><img src="./siberian3.jpg" alt="Cat 3"></a>
+  <a class="animal-card"><img src="./siberian4.jpg" alt="Cat 4"></a>
+  <a class="animal-card"><img src="./siberian5.jpg" alt="Cat 5"></a>
+  <a class="animal-card"><img src="./siberian6.jpg" alt="Cat 6"></a>
+  <a class="animal-card"><img src="./siberian7.jpg" alt="Cat 7"></a>
+  <a class="animal-card"><img src="./siberian8.jpg" alt="Cat 8"></a>
+</div>
+
+<!-- Script to play sound -->
+<script>
+  function playSound() {
+    const sound = document.getElementById("animalSound");
+    sound.play();
+  }
+</script>
+
+</body>
+</html>
+

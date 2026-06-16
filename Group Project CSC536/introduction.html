@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+	
+	.home-icon:hover {
+	  transform: scale(1.05);
+	}
+
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #388e3c;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      color: white;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    h1 {
+      text-align: left;
+      font-size: 2.5em;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    }
+
+    .highlight {
+      color: rgb(251, 251, 6);
+    }
+
+    .click-text {
+      color: orange;
+      font-weight: bold;
+      text-decoration: underline;
+	  text-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+    }
+
+    .next-button-container {
+      text-align: left;
+	  margin-left: 65%;
+      margin-top: -40px;
+      margin-bottom: 40px;
+    }
+
+    .next-icon {
+      height: 70px;
+	  transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+	
+	.next-icon:hover {
+	  transform: scale(1.05);
+	}
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <!-- Home Button Only -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Box -->
+<div class="info-container">
+  <div class="info-box">
+    <h1>INTRODUCTION</h1>
+    <p>Get ready to explore the amazing world of animals. This website is designed to make learning 
+	about animal classification interactive and exciting! Animals are organized into 5 main categories: 
+      <span class="highlight">mammals, birds, reptiles, amphibians</span>, and <span class="highlight">fish</span>. 
+      You can learn more about each animal by <span class="click-text">clicking</span> on images 
+	  to discover in-depth facts, behaviors, habitats, and special features of each species.
+    </p>
+    <p>To make learning even more engaging, enjoy interactive <span class="highlight">quizzes</span> 
+	and <span class="highlight">educational videos</span> that bring animal life to your screen. Whether 
+	you're a student, teacher, or just curious about animal categories, this website will guide you to 
+	discover the wonders of wildlife in a fun and meaningful way.</p>
+  </div>
+</div>
+
+<!-- NEXT Button Below Introduction -->
+<div class="next-button-container">
+  <a href="index.html">
+    <img src="next2.png" alt="Next" class="next-icon">
+  </a>
+</div>
+
+</body>
+</html>

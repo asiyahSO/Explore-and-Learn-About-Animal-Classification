@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box, .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Sound button specific styling */
+    .top-buttons button.sound-btn {
+      background-color: #4CAF50; /* Green button */
+    }
+
+    .top-buttons button.sound-btn:hover {
+      background-color: #45a049; /* Green hover */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Audio Player -->
+<audio id="tigerSound" src="roar.mp3" preload="auto"></audio>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <!-- Sound Button -->
+    <button class="sound-btn" onclick="playSound()">🔊 SOUND</button>
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-icons">
+    <!-- Back Button -->
+    <a href="mammals.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="dashboard.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Info Section -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>BENGAL TIGER</h2>
+    <p>The Bengal tiger (Panthera tigris tigris) is a majestic and powerful big cat native to the Indian subcontinent. Known for its striking orange coat with black stripes, the Bengal tiger is the most numerous tiger subspecies in the wild. They are solitary and territorial animals, primarily hunting large prey such as deer and wild boar. Bengal tigers are excellent swimmers and can thrive in a variety of habitats including tropical forests, mangroves, and grasslands. Unfortunately, due to habitat loss, poaching, and human-wildlife conflict, they are listed as endangered by the IUCN Red List. Conservation efforts continue to be critical in preserving the remaining wild populations and their natural habitats.</p>
+  </div>
+
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> BENGAL TIGER</li>
+      <li><strong>SCIENTIFIC NAME:</strong> PANTHERA TIGRIS</li>
+      <li><strong>TYPE:</strong> MAMMALS</li>
+      <li><strong>SIZE:</strong> 8 TO 10 FEET (BODY LENGTH, excluding tail)</li>
+      <li><strong>WEIGHT:</strong> 220 TO 570 POUNDS</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 8 TO 10 YEARS (In the wild), up to 20 years in captivity</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal Grid -->
+<div class="animal-grid">
+  <a class="animal-card"><img src="./tiger1.jpg" alt="Tiger 1"></a>
+  <a class="animal-card"><img src="./tiger2.jpg" alt="Tiger 2"></a>
+  <a class="animal-card"><img src="./tiger3.jpg" alt="Tiger 3"></a>
+  <a class="animal-card"><img src="./tiger4.jpg" alt="Tiger 4"></a>
+  <a class="animal-card"><img src="./tiger5.jpg" alt="Tiger 5"></a>
+  <a class="animal-card"><img src="./tiger6.jpg" alt="Tiger 6"></a>
+  <a class="animal-card"><img src="./tiger7.jpg" alt="Tiger 7"></a>
+  <a class="animal-card"><img src="./tiger8.jpg" alt="Tiger 8"></a>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function playSound() {
+    const sound = document.getElementById("tigerSound");
+    sound.play();
+  }
+</script>
+
+</body>
+</html>
+
+
