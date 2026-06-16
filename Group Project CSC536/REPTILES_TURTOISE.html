@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      height: 50px;
+    }
+    
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box, .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-icons">
+    <!-- Back Button -->
+    <a href="reptiles.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Info Section -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>GALAPAGOS TORTOISE</h2>
+    <p>The Galapagos Tortoise (Chelonoidis nigra) is the largest species of tortoise found exclusively on the Galápagos Islands in Ecuador. These giant tortoises are famous for their massive size, slow movements, and long lifespan, often exceeding 100 years. They feed mainly on grasses, cacti, and fruits. Galápagos tortoises played a key role in Charles Darwin’s theory of evolution due to the variations observed among different island populations. Conservation efforts have been essential to protect them from threats like invasive species and habitat loss.</p>
+  </div>
+
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> GALAPAGOS TORTOISE</li>
+      <li><strong>SCIENTIFIC NAME:</strong> CHELONOIDIS NIGRA</li>
+      <li><strong>TYPE:</strong> REPTILES</li>
+      <li><strong>SIZE:</strong> UP TO 5 FEET (Length)</li>
+      <li><strong>WEIGHT:</strong> UP TO 550 POUNDS</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 100+ YEARS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal Grid -->
+<div class="animal-grid">
+  <a class="animal-card"><img src="./tortoise1.jpg" alt="Tortoise 1"></a>
+  <a class="animal-card"><img src="./tortoise2.jpg" alt="Tortoise 2"></a>
+  <a class="animal-card"><img src="./tortoise3.jpg" alt="Tortoise 3"></a>
+  <a class="animal-card"><img src="./tortoise4.jpg" alt="Tortoise 4"></a>
+  <a class="animal-card"><img src="./tortoise5.jpg" alt="Tortoise 5"></a>
+  <a class="animal-card"><img src="./tortoise6.jpg" alt="Tortoise 6"></a>
+  <a class="animal-card"><img src="./tortoise7.jpg" alt="Tortoise 7"></a>
+  <a class="animal-card"><img src="./tortoise8.jpg" alt="Tortoise 8"></a>
+</div>
+
+</body>
+</html>
