@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      height: 50px;
+    }
+    
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height:40px;
+      cursor: pointer;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    /* Information Box - now side by side */
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Sound button specific styling */
+    .top-buttons button.sound-btn {
+      background-color: #4CAF50; /* Green button */
+    }
+
+    .top-buttons button.sound-btn:hover {
+      background-color: #45a049; /* Green hover */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Audio Player -->
+<audio id="peguinSound" src="pinguin.mp3" preload="auto"></audio>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <!-- Sound Button -->
+    <button class="sound-btn" onclick="playSound()">🔊 SOUND</button>
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-buttons">
+    <!-- Back Button -->
+    <a href="birds.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Box - now side by side -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>EMPEROR PENGUIN</h2>
+    <p>The Emperor Penguin (Aptenodytes forsteri) is the largest species of penguin native to Antarctica. Recognized by their striking black and white plumage with yellow-orange markings near the ears and neck, they are adapted to survive extreme cold. Emperor penguins breed during the Antarctic winter, with males incubating eggs on their feet under a fold of skin. They feed mainly on fish, squid, and krill, diving deep into icy waters. Their remarkable endurance and social behavior help them thrive in harsh environments.</p>
+  </div>
+  
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> EMPEROR PENGUIN</li>
+      <li><strong>SCIENTIFIC NAME:</strong> APTENODYTES FORSTERI</li>
+      <li><strong>TYPE:</strong> BIRDS</li>
+      <li><strong>SIZE:</strong> 45 INCHES (Length)</li>
+      <li><strong>WEIGHT:</strong> 49 TO 99 POUNDS</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 15 TO 20 YEARS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal grid - image boxes only -->
+<div class="animal-grid">
+  <!-- Image Box 1 -->
+  <a class="animal-card">
+    <img src="./penguin1.jpg" alt="Penguin 1">
+  </a>
+
+  <!-- Image Box 2 -->
+  <a class="animal-card">
+     <img src="./penguin2.jpg" alt="Penguin 2">
+  </a>
+
+  <!-- Image Box 3 -->
+  <a class="animal-card">
+     <img src="./penguin3.jpg" alt="Penguin 3">
+  </a>
+
+  <!-- Image Box 4 -->
+  <a class="animal-card">
+     <img src="./penguin4.jpg" alt="Penguin 4">
+  </a>
+
+  <!-- Image Box 5 -->
+  <a class="animal-card">
+     <img src="./penguin5.jpg" alt="Penguin 5">
+  </a>
+
+  <!-- Image Box 6 -->
+  <a class="animal-card">
+     <img src="./penguin6.jpg" alt="Penguin 6">
+  </a>
+
+  <!-- Image Box 7 -->
+  <a class="animal-card">
+     <img src="./penguin7.jpg" alt="Penguin 7">
+  </a>
+
+  <!-- Image Box 8 -->
+  <a class="animal-card">
+     <img src="./penguin8.jpg" alt="Penguin 8">
+  </a>
+</div>
+
+<script>
+  function playSound() {
+    const sound = document.getElementById("peguinSound");
+    sound.play();
+  }
+</script>
+
+</body>
+</html>

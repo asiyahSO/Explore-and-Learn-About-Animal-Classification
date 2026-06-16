@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    /* Information Box - now side by side */
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Sound button specific styling */
+    .top-buttons button.sound-btn {
+      background-color: #4CAF50; /* Green button */
+    }
+
+    .top-buttons button.sound-btn:hover {
+      background-color: #45a049; /* Green hover */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Audio Player -->
+<audio id="parrotSound" src="parrots-88486.mp3" preload="auto"></audio>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <!-- Sound Button -->
+    <button class="sound-btn" onclick="playSound()">🔊 SOUND</button>
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-buttons">
+    <!-- Back Button -->
+    <a href="birds.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Box - now side by side -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>MACAW PARROT</h2>
+    <p>Macaw Parrots are large, colorful parrots native to the rainforests of South America, especially the Amazon Basin in Brazil and Peru. Famous for their vibrant plumage featuring red, blue, yellow, and green feathers, macaws are highly intelligent and social birds. They use their strong curved beaks to crack nuts and seeds and are known for their loud calls. Macaws play an important role in their ecosystem by dispersing seeds throughout the forest. Many species are threatened due to habitat loss and the pet trade.</p>
+  </div>
+
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> MACAW PARROT</li>
+      <li><strong>SCIENTIFIC NAME:</strong> Various species within genus Ara</li>
+      <li><strong>TYPE:</strong> BIRDS</li>
+      <li><strong>SIZE:</strong> 20 TO 40 INCHES (Length)</li>
+      <li><strong>WEIGHT:</strong> 1 TO 3 POUNDS</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 30 TO 50 YEARS</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal grid - image boxes only -->
+<div class="animal-grid">
+  <!-- Image Box 1 -->
+  <a class="animal-card">
+    <img src="./parrot1.jpg" alt="Parrot 1">
+  </a>
+
+  <!-- Image Box 2 -->
+  <a class="animal-card">
+     <img src="./parrot2.jpg" alt="Parrot 2">
+  </a>
+
+  <!-- Image Box 3 -->
+  <a class="animal-card">
+     <img src="./parrot3.jpg" alt="Parrot 3">
+  </a>
+
+  <!-- Image Box 4 -->
+  <a class="animal-card">
+     <img src="./parrot4.jpg" alt="Parrot 4">
+  </a>
+
+  <!-- Image Box 5 -->
+  <a class="animal-card">
+     <img src="./parrot5.jpg" alt="Parrot 5">
+  </a>
+
+  <!-- Image Box 6 -->
+  <a class="animal-card">
+     <img src="./parrot6.jpg" alt="Parrot 6">
+  </a>
+
+  <!-- Image Box 7 -->
+  <a class="animal-card">
+     <img src="./parrot7.jpg" alt="Parrot 7">
+  </a>
+
+  <!-- Image Box 8 -->
+  <a class="animal-card">
+     <img src="./parrot8.jpg" alt="Parrot 8">
+  </a>
+</div>
+
+<script>
+  function playSound() {
+    const sound = document.getElementById("parrotSound");
+    sound.play();
+  }
+</script>
+
+</body>
+</html>

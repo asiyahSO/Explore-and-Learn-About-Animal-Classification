@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoo Animal Species</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-icon {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .top-buttons button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .home-icon {
+      height: 40px;
+    }
+
+    .info-container {
+      display: flex;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .facts-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts-box li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .animal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animal-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .animal-card .label {
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="logo.png" alt="Zoo Logo" class="logo">
+
+  <div class="top-buttons">
+    <a href="game.html"><button>GAMES</button></a>
+    <a href="video.html"><button>VIDEOS</button></a>
+  </div>
+
+  <!-- Navigation Icons (Back & Home) -->
+  <div class="nav-icons">
+    <!-- Back Button -->
+    <a href="amphibians.html">
+      <img src="back.png" alt="Back" class="nav-icon">
+    </a>
+
+    <!-- Home Button -->
+    <a href="homepage.html">
+      <img src="home.png" alt="Home" class="home-icon">
+    </a>
+  </div>
+</div>
+
+<!-- Information Box - now side by side -->
+<div class="info-container">
+  <div class="info-box">
+    <h2>MEXICAN AXOLOTL</h2>
+    <p> The Mexican Axolotl (Ambystoma mexicanum) is a unique amphibian native to lakes around Mexico City. Unlike most amphibians, axolotls remain in their larval form throughout life, retaining gills and a fully aquatic lifestyle, a phenomenon called neoteny. They are famous for their regenerative abilities, capable of regrowing limbs, spinal cord, and even parts of the heart and brain. Axolotls are critically endangered in the wild due to pollution and habitat destruction, though they are common in labs and aquariums. </p>
+  </div>
+  <div class="facts-box">
+    <h2>FACTS</h2>
+    <ul>
+      <li><strong>COMMON NAME:</strong> MEXICAN AXOLOTL </li>
+      <li><strong>SCIENTIFIC NAME:</strong> AMBYSTOMA MEXICANUM </li>
+      <li><strong>TYPE:</strong> AMPHIBIANS</li>
+      <li><strong>SIZE:</strong> 6 TO 18 INCHES</li>
+      <li><strong>WEIGHT:</strong> 2 TO 8 OUNCES</li>
+      <li><strong>AVERAGE LIFE SPAN:</strong> 10 TO 15 YEARS </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Animal grid - image boxes only -->
+<div class="animal-grid">
+  <!-- Image Box 1 -->
+  <a class="animal-card">
+    <img src="./axolotl1.jpg" alt="Axolotl 1">
+  </a>
+
+  <!-- Image Box 2 -->
+  <a class="animal-card">
+     <img src="./axolotl2.jpg" alt="Axolotl 2">
+  </a>
+
+  <!-- Image Box 3 -->
+  <a class="animal-card">
+     <img src="./axolotl3.jpg" alt="Axolotl 3">
+  </a>
+
+  <!-- Image Box 4 -->
+  <a class="animal-card">
+     <img src="./axolotl4.jpg" alt="Axolotl 4">
+  </a>
+
+  <!-- Image Box 5 -->
+  <a class="animal-card">
+     <img src="./axolotl5.jpg" alt="Axolotl 5">
+  </a>
+
+  <!-- Image Box 6 -->
+  <a class="animal-card">
+     <img src="./axolotl6.jpg" alt="Axolotl 6">
+  </a>
+
+  <!-- Image Box 7 -->
+  <a class="animal-card">
+     <img src="./axolotl7.jpg" alt="Axolotl 7">
+  </a>
+
+  <!-- Image Box 8 -->
+  <a class="animal-card">
+     <img src="./axolotl8.jpg" alt="Axolotl 8">
+  </a>
+</div>
+
+</body>
+</html>
+
+
